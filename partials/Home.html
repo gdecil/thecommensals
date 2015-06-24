@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="img/logo.png">
+      </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav customPos1">
+      <li><a href="/theCommensals/index1.html#/menu" id="link1">Menu'</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right customPos2">
+      <li><a href="/theCommensals/index1.html#/ricette" id="link2">Ricette</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<div >
+    <script id="template/carousel/carousel.html" type="text/ng-template">
+      <div ng-mouseenter="play()" ng-mouseleave="play()" class="carousel" ng-swipe-right="prev()" ng-swipe-left="next()">
+          <ol class="carousel-indicators" ng-show="slides.length > 1">
+              <li ng-repeat="slide in slides | orderBy:'index' track by $index" ng-class="{active: isActive(slide)}" ng-click="select(slide)"></li>
+          </ol>
+          <div class="carousel-inner" ng-transclude></div>
+          <a class="left carousel-control" ng-click="prev()" ng-show="slides.length > 1 && !isActive(slides[0])"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <a class="right carousel-control" ng-click="next()" ng-show="slides.length > 1  && !isActive(slides[slides.length - 1])"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>      
+    </script>
+
+  <div class="underNav">
+    <carousel interval="myInterval" >
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="height:400px; width:100%; margin:auto;">
+      </slide>
+    </carousel>
+  </div>
+</div>
