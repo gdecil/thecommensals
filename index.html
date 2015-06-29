@@ -1,108 +1,70 @@
-<!doctype html>
-<html lang="en" ng-app="xApp">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width">
+<!DOCTYPE html>
+<html ng-app="xApp" class="html" lang="en-US">
+ <head>
 
-  <title>Chembook AngularJs</title>
+    <script type="text/javascript">
+     if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "jquery.scrolleffects.js", "jquery.musepolyfill.bgsize.js", "jquery.watch.js", "index.css"], "outOfDate":[]};
+     </script>
 
-  <link rel="stylesheet" href="js/libs/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="js/libs/bootstrap/dist/css/bootstrap-theme.css">
-  <link rel="stylesheet" type="text/css" href="js/libs/angular.treeview/css/angular.treeview.css">
-  <link rel="stylesheet" href="js/libs/angular-ui-layout/ui-layout.css">
-  <link rel="stylesheet" type="text/css" href="js/libs/ang-accordion/css/ang-accordion.css">    
-
-    
-    
-  <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
-  <script type="application/javascript" src="js/libs/jquery.session.js"></script>
-  <script type="application/javascript" src="js/libs/angular/angular.js"></script>
-  <!--<script  src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>-->
-  <script type="application/javascript" src="js/libs/angular-route/angular-route.js"></script>
-  <script type="application/javascript" src="js/libs/angular-animate/angular-animate.min.js"></script>
-  <script type="application/javascript" src="js/libs/angular-ui-layout/ui-layout.js"></script>
-  <script type="application/javascript" src='js/libs/angular-sanitize.min.js'></script>
-  <script type="application/javascript" src='js/libs/bootstrap/dist/js/bootstrap.js'></script>
-  <script type="application/javascript" src="js/libs/angular.treeview/angular.treeview.js"></script>
-  <script type="application/javascript" src="js/libs/ang-accordion/js/ang-accordion.js"></script>
-  <script type="application/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-cookies.js"></script>
-
-  <!--angular-dirty-form-->
-  <script src="js/libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <script src="js/libs/ui-bootstrap-dialog/dist/ui-bootstrap-dialog.min.js"></script>
-  <link rel="stylesheet" href="js/libs/angular-inform/dist/angular-inform.css">
-  <script src="js/libs/angular-inform/dist/angular-inform.min.js"></script>
-  <script src="js/libs/angular-dirty-form/src/angular-dirty-form.js"></script>
-  
-  <!--angular-schema-form-->
-  <script type="text/javascript" src="js/libs/tv4/tv4.js"></script>
-  <script type="text/javascript" src="js/libs/angular-ui-ace/ui-ace.js"></script>
-  <script type="text/javascript" src="js/libs/objectpath/lib/ObjectPath.js"></script>
-  <script type="text/javascript" src="js/libs/angular-schema-form/schema-form.js"></script>
-  <script type="text/javascript" src="js/libs/angular-schema-form/bootstrap-decorator.min.js"></script>
-  
-  <!--angular-bootstrap-->
-  <script src="js/libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-  <link href="js/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!--jqgrid-->
-  <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui.css" />
-  <link rel="stylesheet" type="text/css" href="js/libs/jqGrid 4.6.0/css/ui.jqgrid.css"  />
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/i18n/grid.locale-en.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/grid.base.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/grid.common.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/grid.formedit.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/grid.inlinedit.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/grid.celledit.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/grid.subgrid.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/grid.treegrid.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/grid.grouping.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/grid.custom.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/jquery.fmatter.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/jquery.searchFilter.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/grid.jqueryui.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/jqDnR.js"></script>
-  <script type="text/javascript" src="js/libs/jqGrid 4.6.0/src/jqModal.js"></script>
-    
-    <!--ckeditor-->
-    <script src="//cdn.ckeditor.com/4.4.7/standard-all/ckeditor.js"></script>
-    <script src="js/libs/ng-ckeditor-1.0.1.js"></script>
-
-    <!--ngDialog-->
-    <script src="js/libs/ngDialog/js/ngDialog.min.js"></script>
-    <link rel="stylesheet" href="js/libs/ngDialog/css/ngDialog.css">
-	<link rel="stylesheet" href="js/libs/ngDialog/css/ngDialog-theme-default.css">
-	<link rel="stylesheet" href="js/libs/ngDialog/css/ngDialog-theme-flat.css">
-
-  
-  <!--application-->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/styleNav.css">
-
-  <script type="application/javascript" src="js/experiment.js"></script>
-  <script type="application/javascript" src="js/common.js"></script>
-  <script type="application/javascript" src="js/controllers.js"></script>
-  <script type="application/javascript" src="js/directives.js"></script>
-  <script type="application/javascript" src="js/run.js"></script>
-  <script type="application/javascript" src="js/get.js"></script>
-  <script type="application/javascript" src="js/createGrid.js"></script>
-  <script type="application/javascript" src="js/app.js"></script>
-
-  <!--chart-->
-<!-- da fastidio parecchio immetterlo se e quando necessario: da verificare
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
--->
-    <script src="http://code.highcharts.com/stock/highstock.src.js"></script>
-    <script src="js/highcharts-ng.js"></script>
-  
-<!--
-  <link data-require="jqgrid@*" data-semver="4.5.2" rel="stylesheet" href="//cdn.jsdelivr.net/jqgrid/4.5.2/css/ui.jqgrid.css" />
-  <script data-require="jqgrid@*" data-semver="4.5.2" src="//cdn.jsdelivr.net/jqgrid/4.5.2/jquery.jqGrid.js"></script>-->
-
-</head>
-<body>
-
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <meta name="generator" content="2014.3.2.295"/>
+    <title>Home</title>
+    <!-- CSS -->
+    <link href="app/css/libs/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app/css/site_global.css?4091887897"/>
+    <link rel="stylesheet" type="text/css" href="app/css/master_a-master.css?4131871658"/>
+    <link rel="stylesheet" type="text/css" href="app/css/index.css?3859322303" id="pagesheet"/>
+    <!-- Other scripts -->
+    <script type="application/javascript" src="app/js/libs/background-check.js"></script>
+    <script type="text/javascript">
+     document.documentElement.className += ' js';
+     </script>
+  </head>
+ <body>
   <div ng-view></div>
-  <div inform class="inform-fixed inform-shadow inform-center inform-animate"></div>
-</body>
+  <!-- JS includes -->
+  <script type="text/javascript">
+   if (document.location.protocol != 'https:') document.write('\x3Cscript src="app/js/libs/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+   </script>
+  <script type="text/javascript">
+   window.jQuery || document.write('\x3Cscript src="app/js/libs/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+   </script>   
+<!--
+    <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
+-->
+  <script src="app/js/libs/angular.js"></script>
+  <script src="app/js/libs/ui-bootstrap-tpls-0.13.0.js"></script>
+<!--
+    <link href='css/demo1.css' rel='stylesheet' type='text/css'>
+-->
+  <script type="application/javascript" src="app/js/libs/jquery.session.js"></script>
+  <script src="app/js/libs/angular-route.js"></script>
+  <link href="app/css/grid.css" type="text/css" rel="stylesheet" />
+  <script src="app/js/creamenu/modernizr.custom.js"></script>
+
+   <!--ricette-->
+   		<link rel="stylesheet" type="text/css" href="app/css/ricette/demo.css" />
+		<link rel="stylesheet" type="text/css" href="app/css/ricette/component.css" />
+		<script src="app/js/ricette/imagesloaded.pkgd.min.js"></script>
+		<script src="app/js/ricette/masonry.pkgd.min.js"></script>
+		<script src="app/js/ricette/classie.js"></script>
+		<script src="app/js/ricette/cbpGridGallery.js"></script>
+   <!--ricette-->
+   
+   <!--crea menu js e css per ora usati solo in questa pagina-->
+	<!--<link rel="stylesheet" href="app/css/libs/font-awesome.min.css">-->
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="app/fonts/pixelfabric-clothes/style.css" />
+	<link rel="stylesheet" type="text/css" href="app/css/creamenu/flickity.css" />
+	<link rel="stylesheet" type="text/css" href="app/css/creamenu/component.css" />
+    <script src="app/js/creamenu/isotope.pkgd.min.js"></script>
+	<script src="app/js/creamenu/flickity.pkgd.min.js"></script>
+	<script src="app/js/creamenu/beforemain.js"></script>
+
+<!--crea menu-->
+   
+   <script type="application/javascript" src="app/js/app.js"></script>
+  <script type="application/javascript" src="app/js/controllers.js"></script>
+   
+ </body>
 </html>

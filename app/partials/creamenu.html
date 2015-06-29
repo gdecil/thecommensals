@@ -1,0 +1,201 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+       </button>
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="app/img/logo.png">
+        </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav customPos1">
+        <li><a href="index.html#/menu" id="link1">Menu'</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right customPos2">
+        <li><a href="index.html#/ricette" id="link2">Ricette</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+	<!-- Bottom bar with filter and cart info 
+style="top: 80px;position: relative; height: 881px;"
+    -->
+	<div class="bar" >
+		<div class="filter">
+			<span class="filter__label">Filter: </span>
+			<button class="action filter__item filter__item--selected" data-filter="*">All</button>
+			<button class="action filter__item" data-filter=".primi"><i class="icon icon--jacket"></i><span class="action__text">Primi</span></button>
+			<button class="action filter__item" data-filter=".secondi"><i class="icon icon--secondi"></i><span class="action__text">Secondi</span></button>
+			<button class="action filter__item" data-filter=".contorni"><i class="icon icon--jacket"></i><span class="action__text">Contorni</span></button>
+			<button class="action filter__item" data-filter=".dolce"><i class="icon icon--dolce"></i><span class="action__text">Dolci</span></button>
+		</div>
+		<button class="cart">
+			<i class="cart__icon fa fa-shopping-cart"></i>
+			<span class="text-hidden">Shopping cart</span>
+			<span class="cart__count">0</span>
+		</button>
+		<button id = "clearButton" class="cart" onClick="clearSession()">Clear
+		</button>
+		<button id = "componiButton" class="cart" onClick="componi()">Comp
+		</button>
+	</div>
+
+	<!-- Main view -->
+	<div class="view">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+		</header>
+		<!-- Grid -->
+		<section class="grid grid--loading">
+			<!-- Loader -->
+			<img class="grid__loader" src="app/img/creamenu/grid.svg" width="60" alt="Loader image" />
+			<!-- Grid sizer for a fluid Isotope (Masonry) layout -->
+			<div class="grid__sizer"></div>
+			<!-- Grid items -->
+            
+			<div id = "1" class="grid__item grid__item--size-a dolce">
+				<div class="slider">
+					<div class="slider__item"><img src="app/img/ricette/Cheesecake_Fetta.jpg" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Cheesecake_non_decorata.jpg" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Cheesecake_torta.jpg" alt="Dummy" /></div>
+				</div>
+                <a href="index.html#/cheesecake">
+				<div class="meta">
+					<h3 class="meta__title">Cheesecake</h3>
+					<span class="meta__brand">Dolce</span>
+					<span class="meta__price">€15</span>
+				</div>
+                </a>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>          
+			<div id = "2" class="grid__item secondi">
+				<div class="slider">
+					<div class="slider__item"><img src="app/img/ricette/Cappesante.jpg" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Cappesante.jpg" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Cappesante.jpg" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Capesante</h3>
+					<span class="meta__brand">Secondi</span>
+					<span class="meta__price">€15</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div id = "3" class="grid__item secondi">
+				<div class="slider">
+					<div class="slider__item"><img src="app/img/ricette/ConiglioBassaTemperatura.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/ConiglioBassaTemperatura.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/ConiglioBassaTemperatura.png" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Coniglio a bassa temperatura</h3>
+					<span class="meta__brand">Secondi</span>
+					<span class="meta__price">€15</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div id = "4" class="grid__item grid__item--size-a dolce">
+				<div class="slider">
+					<div class="slider__item"><img src="app/img/ricette/Crostatina-di-more.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Crostatina-di-more.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Crostatina-di-more.png" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Crostatina di more</h3>
+					<span class="meta__brand">Dolci</span>
+					<span class="meta__price">€10</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div id = "5" class="grid__item secondi">
+				<div class="slider">
+					<div class="slider__item"><img src="app/img/ricette/Gambero-all'occhio-di-bue01.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Gambero-all'occhio-di-bue01.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Gambero-all'occhio-di-bue01.png" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Gambero all'occhio di bue</h3>
+					<span class="meta__brand">Secondi</span>
+					<span class="meta__price">€20</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div id = "6" class="grid__item grid__item--size-a primi">
+				<div class="slider">
+					<div class="slider__item"><img src="app/img/ricette/Gnocchi_al_pesto.jpg" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Gnocchi_al_pesto.jpg" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Gnocchi_al_pesto.jpg" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Gnocchi al pesto</h3>
+					<span class="meta__brand">Primi</span>
+					<span class="meta__price">€10</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div id = "7" class="grid__item secondi">
+				<div class="slider">
+					<div class="slider__item"><img src="app/img/ricette/Guazzetto di cozze.jpg" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Guazzetto di cozze.jpg" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Guazzetto di cozze.jpg" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Guazzetto di cozze</h3>
+					<span class="meta__brand">Secondi</span>
+					<span class="meta__price">€15</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div id = "8" class="grid__item secondi">
+				<div class="slider">
+					<div class="slider__item"><img src="app/img/ricette/Parmigiana-di-Zucca.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Parmigiana-di-Zucca.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/Parmigiana-di-Zucca.png" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Parmigiana di zucca</h3>
+					<span class="meta__brand">Secondi</span>
+					<span class="meta__price">€10</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div id = "9" class="grid__item primi">
+				<div class="slider">
+					<div class="slider__item"><img src="app/img/ricette/PastaAlloScoglio.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/PastaAlloScoglio.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/PastaAlloScoglio.png" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Pasta allo scoglio</h3>
+					<span class="meta__brand">Primi</span>
+					<span class="meta__price">€15</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+			<div id = "10" class="grid__item contorni">
+				<div class="slider">
+					<div class="slider__item"><img src="app/img/ricette/PorciniTrifolati.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/PorciniTrifolati.png" alt="Dummy" /></div>
+					<div class="slider__item"><img src="app/img/ricette/PorciniTrifolati.png" alt="Dummy" /></div>
+				</div>
+				<div class="meta">
+					<h3 class="meta__title">Porcini trifolati</h3>
+					<span class="meta__brand">Contorni</span>
+					<span class="meta__price">€10</span>
+				</div>
+				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+			</div>
+		</section>
+		<!-- /grid-->
+	</div>
+	<!-- /view -->
+	<link rel="stylesheet" type="text/css" href="app/css/creamenu/demo.css" />
+	<script src="app/js/creamenu/main.js"></script>
