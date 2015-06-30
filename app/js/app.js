@@ -62,8 +62,8 @@ xApp.config(['$routeProvider',
       when('/ricette', {
         templateUrl: 'app/partials/ricette.html'
       }).
-      when('/cheesecake', {
-        templateUrl: 'app/partials/ricette/cheesecake.html',
+      when('/apriRicetta', {
+        templateUrl: 'app/partials/ricette/ric.html',
         controller: 'MainCtrl'
       }).
       when('/creaMenu', {

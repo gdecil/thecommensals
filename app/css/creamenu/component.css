@@ -60,7 +60,7 @@
 .slider {
 	padding: 0;
 	border-radius: 5px;
-	background: #24252a;
+	background: azure;
 }
 
 .no-touch .slider {
@@ -79,7 +79,7 @@
 
 .slider .flickity-page-dots {
 	bottom: 20px;
-	opacity: 0;
+	/*opacity: 0;*/
 	-webkit-transition: opacity .3s;
 	transition: opacity .3s;
 }

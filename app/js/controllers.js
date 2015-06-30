@@ -2,8 +2,15 @@
 /* Controllers */
 
 var xControllers = angular.module('xControllers', ['ui.bootstrap'])
-.controller('MainCtrl', ['$scope', function($scope) {    
+.controller('MainCtrl', ['$scope', '$location', '$anchorScroll', function($scope,$location,$anchorScroll) {    
   $scope.$on('$viewContentLoaded', function(){
+    $scope.scrollTo = function(selector) {
+      window.scrollTo(0, $("#"+ selector )[0].offsetTop - 100);
+/*
+      $location.hash(id);
+      $anchorScroll();
+*/
+    }
 /*
     BackgroundCheck.init({
       targets: '.navbar-nav'

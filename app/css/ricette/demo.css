@@ -24,7 +24,7 @@ body {
 }
 
 a {
-	color: #f0f0f0;
+	color: blue;
 	text-decoration: none;
 	outline: none;
 }
@@ -182,4 +182,15 @@ a:hover {
 	.container > header > span {
 		text-indent: 30px;
 	}
+}
+
+h1
+{
+	font-size: 6em;
+	font-weight: inherit;
+}
+h2
+{
+	font-size: 4em;
+	font-weight: inherit;
 }

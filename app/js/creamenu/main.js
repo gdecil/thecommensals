@@ -130,7 +130,15 @@
 			flkties[i].resize();
 		}
 	}
-
+    
+/*
+    function initRicette(){
+      $("#2 .meta").click(function(){
+          alert("The paragraph was clicked.");
+      });
+    }
+*/
 	init();
-
+//    initRicette()
 })(window);
+

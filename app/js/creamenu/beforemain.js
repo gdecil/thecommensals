@@ -1,6 +1,11 @@
 var componi = function(){
+  if($.session.get('cartItems')==undefined){
+    return
+  }
   carrello = $.session.get('cartItems').split(',');
-  alert("Crea menu " + $.session.get('cartItems'))
+//  alert(carrello)
+  window.open('index.html#/apriRicetta?ricetta='+carrello,"_self")
+//  alert("Crea menu " + $.session.get('cartItems'))
 }
 var clearSession = function(){
   $.session.clear();
@@ -51,8 +56,9 @@ var support = { animations : Modernizr.cssanimations },
 		// filter ctrls
 		filterCtrls = [].slice.call(document.querySelectorAll('.filter > button')),
 		// cart
-		cart = document.querySelector('.cart'),
-		cartItems = cart.querySelector('.cart__count');
+		cart = document.querySelector('.cart')
+        if(cart!=null){cartItems = cart.querySelector('.cart__count');}
+		
 
 function addToCart() {
 		cart = document.querySelector('.cart'),
@@ -64,10 +70,15 @@ function addToCart() {
 		});
         if(cartItems.innerHTML=="0"){
           $.session.set("cartItems", "");
+          $.session.set("cartNomi", "");
         }
         carrello = $.session.get('cartItems').split(',');
         carrello.push(this.parentElement.id)
         $.session.set("cartItems", carrello);
         cartItems.innerHTML= carrello.length -2
+
+        carrellonomi = $.session.get('cartNomi').split(',');
+        carrellonomi.push(this.parentElement.attributes[1].nodeValue)
+        $.session.set("cartNomi", carrellonomi);
 	}
 
